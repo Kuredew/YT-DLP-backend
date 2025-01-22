@@ -7,7 +7,7 @@ app.get('/yt-dl', (req, res) => {
     
     const link = req.query.link;
 
-    const yt_dlpArg = `yt-dlp -g ${link}`;
+    const yt_dlpArg = `yt-dlp.exe -g ${link}`;
 
     child_process.exec(yt_dlpArg, (error, stdout, stderr) => {
         console.log(stdout);
